@@ -76,7 +76,7 @@
 &kp Q           &kp W        &kp E            &kp R              &kp T                                    &kp Y          &kp U               &kp I                 &kp O        &kp P
 &hm LEFT_ALT A  &hm LCTRL S  &hmd LEFT_WIN D  &hmd LEFT_SHIFT F  &kp G      &mkp MCLK        &none        &kp H          &hmd RIGHT_SHIFT J  &hmd RIGHT_COMMAND K  &hm RCTRL L  &hm RIGHT_ALT APOSTROPHE
 &kp Z           &kp X        &kp C            &kp V              &kp B      &none            &none        &kp N          &kp M               &kp COMMA             &kp DOT      &kp SLASH
-&mo 6           &none        &mkp MB2         &mo 5              &mkp LCLK  &lt 2 ENTER      &lt 1 SPACE  &kp BACKSPACE                                                         &to 4
+&mo 6           &none        &mkp MB2         &lt 5 CAPS         &mkp LCLK  &lt 2 ENTER      &lt 1 SPACE  &kp BACKSPACE                                                         &to 4
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN>;
@@ -84,20 +84,22 @@
 
         arrow_and_symbols {
             bindings = <
-&kp TAB               &kp AMPERSAND    &kp ASTERISK  &kp BSLH   &kp GRAVE                                  &trans    &trans     &trans     &trans     &trans
-&kp LEFT_PARENTHESIS  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp RIGHT_PARENTHESIS  &trans      &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp RCTRL
-&kp LBKT              &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp RBKT               &trans      &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans                &trans           &trans        &trans     &kp ESC                &trans      &trans  &trans                                     &trans
+&kp TAB               &kp AMPERSAND    &kp ASTERISK  &kp BSLH    &kp GRAVE                                  &trans    &trans     &trans     &trans     &trans
+&kp LEFT_PARENTHESIS  &kp DOLLAR       &kp PERCENT   &kp CARET   &kp RIGHT_PARENTHESIS  &trans      &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp RCTRL
+&kp LBKT              &kp EXCLAMATION  &kp AT_SIGN   &kp HASH    &kp RBKT               &trans      &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans                &trans           &trans        &kp ESCAPE  &trans                 &trans      &trans  &trans                                     &trans
             >;
         };
 
         NUM {
             bindings = <
-&none     &none      &none     &kp C_VOLUME_UP    &none                                                &none     &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp LALT  &kp LCTRL  &kp LGUI  &kp LSHFT          &kp RS(RG(N5))  &kp LC(LA(KP_NUMBER_0))      &trans  &kp DOT   &kp N4  &kp N5  &kp N6  &kp SEMI
-&none     &none      &none     &kp C_VOLUME_DOWN  &none           &trans                       &trans  &kp N0    &kp N1  &kp N2  &kp N3  &kp EQUAL
-&trans    &trans     &trans    &trans             &trans          &trans                       &trans  &kp BSPC                          &trans
+&none     &none      &none     &kp C_VOLUME_UP    &none                                                      &none     &kp N7  &kp N8  &kp N9  &kp MINUS
+&kp LALT  &kp LCTRL  &kp LGUI  &kp LSHFT          &kp RS(RG(N5))        &kp LC(LA(KP_NUMBER_0))      &trans  &kp DOT   &kp N4  &kp N5  &kp N6  &kp SEMI
+&none     &none      &none     &kp C_VOLUME_DOWN  &kp RS(RG(NUMBER_4))  &trans                       &trans  &kp N0    &kp N1  &kp N2  &kp N3  &kp EQUAL
+&trans    &trans     &trans    &trans             &trans                &trans                       &trans  &kp BSPC                          &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         shortcuts {
@@ -108,18 +110,16 @@
 &trans             &trans             &trans             &trans             &trans             &trans      &trans  &trans                                                                      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &to 0
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &to 0
             >;
-
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
 
         SCROLL {
