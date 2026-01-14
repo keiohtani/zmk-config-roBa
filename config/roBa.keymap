@@ -54,6 +54,18 @@
             require-prior-idle-ms = <100>;
         };
 
+        hmd_mkp: hold_tap_key_or_mkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMD_MKP";
+        
+            #binding-cells = <2>;
+            bindings = <&kp>, <&mkp>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HM";
@@ -61,6 +73,18 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <160>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+        };
+
+        ht_mo_mkp: hold_layer_or_mkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_MO_MKP";
+            #binding-cells = <2>;
+        
+            bindings = <&mo>, <&mkp>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
@@ -114,9 +138,9 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans                     &trans  &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &hmd RIGHT_SHIFT &mkp MB1  &trans  &lt 5 &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans                     &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans                     &trans  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &hmd_mkp RIGHT_SHIFT LCLK   &trans  &ht_mo_mkp 5 RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans                     &trans  &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &to 0
             >;
         };
