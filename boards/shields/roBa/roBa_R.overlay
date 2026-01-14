@@ -25,7 +25,7 @@
          * - require-prior-idle-ms: avoid activating while typing/vibrating.
          * - timeout (ms): how long the layer stays on after last pointer event.
          */
-        input-processors = <&zip_temp_layer 4 3000>;
+        input-processors = <&zip_temp_layer 4 1800>;
     };
 };
 
@@ -34,7 +34,7 @@
  * Increase this if the layer still activates while typing.
  */
 &zip_temp_layer {
-    require-prior-idle-ms = <700>;
+    require-prior-idle-ms = <800>;
 };
 
 &pinctrl {
