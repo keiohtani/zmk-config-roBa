@@ -1,4 +1,5 @@
 #include "roBa.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -18,8 +19,22 @@
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
-        device = <&trackball>;
+        device = <&trackball>;        
+        /*
+         * Auto Mouse Layer (layer 4) via temp-layer input processor.
+         * - require-prior-idle-ms: avoid activating while typing/vibrating.
+         * - timeout (ms): how long the layer stays on after last pointer event.
+         */
+        input-processors = <&zip_temp_layer 4 3000>;
     };
+};
+
+/*
+ * Tuning for automouse misfires:
+ * Increase this if the layer still activates while typing.
+ */
+&zip_temp_layer {
+    require-prior-idle-ms = <700>;
 };
 
 &pinctrl {

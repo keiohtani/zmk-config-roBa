@@ -6,7 +6,6 @@
 &lt { tapping-term-ms = <150>; };
 
 &trackball {
-    automouse-layer = <4>;
     scroll-layers = <5>;
 
     // arrows {
