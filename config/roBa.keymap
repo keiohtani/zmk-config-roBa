@@ -30,27 +30,17 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <12 13>;
+            key-positions = <0 1>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 11>;
+            key-positions = <1 2>;
         };
 
         double_quotes {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
-        };
-
-        left_click {
-            bindings = <&mkp LCLK>;
-            key-positions = <18 19>;
-        };
-
-        right_click {
-            bindings = <&mkp RCLK>;
-            key-positions = <19 20>;
         };
     };
 
@@ -110,9 +100,9 @@
         home_layer {
             bindings = <
 &kp Q           &kp W        &kp E            &kp R              &kp T                                    &kp Y          &kp U               &kp I                 &kp O        &kp P
-&hm LEFT_ALT A  &hm LCTRL S  &hmd LEFT_WIN D  &hmd LEFT_SHIFT F  &kp G      &mkp MCLK        &none        &kp H          &hmd RIGHT_SHIFT J  &hmd RIGHT_COMMAND K  &hm RCTRL L  &hm RIGHT_ALT APOSTROPHE
-&kp Z           &kp X        &kp C            &kp V              &kp B      &none            &none        &kp N          &kp M               &kp COMMA             &kp DOT      &kp SLASH
-&mo 6           &none        &mkp MB2         &lt 5 ESCAPE       &mkp LCLK  &lt 2 ENTER      &lt 1 SPACE  &kp BACKSPACE                                                         &to 4
+&hm LEFT_ALT A  &hm LCTRL S  &hmd LEFT_WIN D  &hmd LEFT_SHIFT F  &kp G      &to 4            &kp MINUS    &kp H          &hmd RIGHT_SHIFT J  &hmd RIGHT_COMMAND K  &hm RCTRL L  &hm RIGHT_ALT APOSTROPHE
+&kp Z           &kp X        &kp C            &kp V              &kp B      &kp TAB          &kp COLON    &kp N          &kp M               &kp COMMA             &kp DOT      &kp SLASH
+&mo 6           &none        &mkp MB2         &lt 5 ESCAPE       &mkp LCLK  &lt 2 ENTER      &lt 1 SPACE  &kp BACKSPACE                                                         &none
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN>;
@@ -152,9 +142,9 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK  &mo 5   &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &to 0       &trans  &trans  &mkp LCLK  &mo 5   &mkp RCLK  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans     &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &to 0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
