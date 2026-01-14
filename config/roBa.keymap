@@ -27,17 +27,27 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <12 13>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
         };
 
         double_quotes {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
+        };
+
+        left_click {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+        };
+
+        right_click {
+            bindings = <&mkp RCLK>;
+            key-positions = <19 20>;
         };
     };
 
@@ -57,9 +67,9 @@
         hmd_mkp: hold_tap_key_or_mkp {
             compatible = "zmk,behavior-hold-tap";
             label = "HMD_MKP";
-        
             #binding-cells = <2>;
             bindings = <&kp>, <&mkp>;
+
             tapping-term-ms = <180>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
@@ -82,8 +92,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT_MO_MKP";
             #binding-cells = <2>;
-        
             bindings = <&mo>, <&mkp>;
+
             tapping-term-ms = <180>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
@@ -138,10 +148,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans                     &trans  &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &hmd_mkp RIGHT_SHIFT LCLK   &trans  &ht_mo_mkp 5 RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans                     &trans  &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &to 0
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &to 0
             >;
         };
 
