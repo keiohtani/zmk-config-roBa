@@ -15,28 +15,6 @@
             ;
 };
 
-/ {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;        
-        /*
-         * Auto Mouse Layer (layer 4) via temp-layer input processor.
-         * - require-prior-idle-ms: avoid activating while typing/vibrating.
-         * - timeout (ms): how long the layer stays on after last pointer event.
-         */
-        input-processors = <&zip_temp_layer 4 1800>;
-    };
-};
-
-/*
- * Tuning for automouse misfires:
- * Increase this if the layer still activates while typing.
- */
-&zip_temp_layer {
-    require-prior-idle-ms = <800>;
-};
-
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
