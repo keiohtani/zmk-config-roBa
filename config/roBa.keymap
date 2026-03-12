@@ -127,10 +127,10 @@
 
         shortcuts {
             bindings = <
-&kp RS(RC(RG(Q)))  &kp RS(RG(RC(W)))  &kp RS(RC(RG(E)))  &kp RS(RC(RG(R)))  &kp RS(RC(RG(T)))                      &trans             &kp LS(LC(LG(U)))  &kp LS(LC(LG(I)))  &kp LS(LC(LG(O)))  &kp LS(LG(LC(P)))
-&kp RG(RC(RS(A)))  &kp RG(RC(RS(S)))  &kp RG(RC(RS(D)))  &kp RS(RC(RG(F)))  &kp RS(RC(RG(G)))  &trans      &trans  &kp LS(LG(LC(H)))  &kp LS(LG(LC(J)))  &kp LS(LG(LC(K)))  &kp LS(LC(LG(L)))  &kp LS(LG(LC(SEMICOLON)))
-&kp RS(RC(RG(Z)))  &none              &kp RS(RC(RG(C)))  &kp RS(RC(RG(V)))  &kp RS(RC(RG(B)))  &trans      &trans  &kp LS(LC(LG(N)))  &kp LS(LG(LC(M)))  &trans             &trans             &trans
-&trans             &trans             &trans             &trans             &trans             &trans      &trans  &trans                                                                      &trans
+&kp RS(RC(RG(Q)))  &kp RS(RG(RC(W)))  &kp RS(RC(RG(E)))  &kp RS(RC(RG(R)))  &kp RS(RC(RG(T)))                      &trans             &kp LS(LC(LG(U)))  &kp LS(LC(LG(I)))  &kp LS(LC(LG(O)))       &kp LS(LG(LC(P)))
+&kp RG(RC(RS(A)))  &kp RG(RC(RS(S)))  &kp RG(RC(RS(D)))  &kp RS(RC(RG(F)))  &kp RS(RC(RG(G)))  &trans      &trans  &kp LS(LG(LC(H)))  &kp LS(LG(LC(J)))  &kp LS(LG(LC(K)))  &kp LS(LC(LG(L)))       &kp LS(LG(LC(SEMICOLON)))
+&kp RS(RC(RG(Z)))  &kp RS(RC(RG(X)))  &kp RS(RC(RG(C)))  &kp RS(RC(RG(V)))  &kp RS(RC(RG(B)))  &trans      &trans  &kp LS(LC(LG(N)))  &kp LS(LG(LC(M)))  &trans             &kp LS(LC(LG(PERIOD)))  &trans
+&trans             &trans             &trans             &trans             &trans             &trans      &trans  &trans                                                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
